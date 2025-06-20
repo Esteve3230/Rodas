@@ -1,66 +1,144 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>RODAS - Sistema de Ingresos Reales</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GUDIEL STREAMING PRO</title>
   <style>
     body {
-      background-color: #f5f5f5;
-      font-family: Arial;
-      color: #333;
-      padding: 0;
       margin: 0;
+      font-family: Arial, sans-serif;
+      background: #121212;
+      color: #e0e0e0;
     }
     header {
-      background-color: #2c3e50;
-      color: white;
-      padding: 1rem;
+      background: #1f1f1f;
+      padding: 20px;
       text-align: center;
-      font-size: 1.8rem;
     }
-    .container {
-      max-width: 800px;
-      margin: auto;
-      padding: 2rem;
-    }
-    .button {
-      padding: 1rem;
-      background-color: #27ae60;
-      color: white;
-      border: none;
+    header h1 { margin: 0; color: #00ff99; }
+
+    .container { padding: 20px; max-width: 600px; margin: auto; }
+    .service {
+      background: #1f1f1f;
+      margin-bottom: 15px;
+      padding: 15px;
       border-radius: 8px;
-      cursor: pointer;
-      font-size: 1.2rem;
-      width: 100%;
-      margin-top: 1rem;
+      position: relative;
     }
-    .hidden {
-      display: none;
+    .service h3 { margin: 0 0 10px; }
+    .price-old {
+      text-decoration: line-through;
+      color: #888;
+      margin-right: 10px;
     }
-    a {
-      display: block;
-      margin-top: 2rem;
+    .price-new {
+      font-size: 1.4em;
+      color: #00ff99;
+    }
+    .label-save {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: #ff5722;
+      color: #fff;
+      padding: 5px 8px;
+      border-radius: 4px;
+      font-size: 0.9em;
+    }
+
+    .buy-btn {
+      display: inline-block;
+      margin-top: 10px;
+      background: #00ff99;
+      color: #121212;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    footer {
       text-align: center;
-      font-size: 1.1rem;
-      color: #2980b9;
+      padding: 15px;
+      font-size: 0.85em;
+      background: #1f1f1f;
+      margin-top: 50px;
+    }
+    @media (max-width: 600px) {
+      .service { padding: 12px; }
+      .buy-btn { width: 100%; text-align: center; }
     }
   </style>
 </head>
 <body>
-  <header>RODAS - Sistema de Ingresos Monetizados</header>
-  <div class="container">
-    <p>🧠 Sistema activo para ingresos automáticos.</p>
-    <button class="button" onclick="activarBots()">🔁 Activar sistema GUDIEL</button>
-    <a href="https://exe.io/bHpWf5Gu" target="_blank">🔗 Acceder al enlace monetizado</a>
+
+<header>
+  <h1>GUDIEL STREAMING PRO</h1>
+  <p>Las mejores membresías de Netflix, HBO Max, Disney+, Star+ y Prime Video</p>
+</header>
+
+<div class="container">
+  <!-- Netflix -->
+  <div class="service">
+    <div class="label-save">–Q15</div>
+    <h3>Netflix</h3>
+    <p><span class="price-old">Q50</span><span class="price-new">Q35</span></p>
+    <a class="buy-btn"
+       href="https://wa.me/50230587913?text=Hola,%20estoy%20interesado%20en%20comprar%20una%20cuenta%20de%20Netflix.%20¿Cu%C3%B3mo%20hago%20el%20pago%20por%20Banrural%3F">
+      Comprar por Q35
+    </a>
   </div>
 
-  <script>
-    function activarBots() {
-      fetch("https://your-gudiel-backend-url.com/activar") // será reemplazado por Replit o Termux
-        .then(res => alert("✅ Bots activados correctamente"))
-        .catch(err => alert("❌ Error al activar bots"));
-    }
-  </script>
+  <!-- HBO Max -->
+  <div class="service">
+    <div class="label-save">–Q10</div>
+    <h3>HBO Max</h3>
+    <p><span class="price-old">Q35</span><span class="price-new">Q25</span></p>
+    <a class="buy-btn"
+       href="https://wa.me/50230587913?text=Hola,%20estoy%20interesado%20en%20comprar%20una%20cuenta%20de%20HBO%20Max.%20¿Cu%C3%B3mo%20hago%20el%20pago%20por%20Banrural%3F">
+      Comprar por Q25
+    </a>
+  </div>
+
+  <!-- Disney+ -->
+  <div class="service">
+    <div class="label-save">–Q15</div>
+    <h3>Disney+</h3>
+    <p><span class="price-old">Q45</span><span class="price-new">Q30</span></p>
+    <a class="buy-btn"
+       href="https://wa.me/50230587913?text=Hola,%20estoy%20interesado%20en%20comprar%20una%20cuenta%20de%20Disney%.2B.%20¿Cu%C3%B3mo%20hago%20el%20pago%20por%20Banrural%3F">
+      Comprar por Q30
+    </a>
+  </div>
+
+  <!-- Star+ -->
+  <div class="service">
+    <div class="label-save">–Q10</div>
+    <h3>Star+</h3>
+    <p><span class="price-old">Q35</span><span class="price-new">Q25</span></p>
+    <a class="buy-btn"
+       href="https://wa.me/50230587913?text=Hola,%20estoy%20interesado%20en%20comprar%20una%20cuenta%20de%20Star%2B.%20¿Cu%C3%B3mo%20hago%20el%20pago%20por%20Banrural%3F">
+      Comprar por Q25
+    </a>
+  </div>
+
+  <!-- Prime Video -->
+  <div class="service">
+    <div class="label-save">–Q15</div>
+    <h3>Prime Video</h3>
+    <p><span class="price-old">Q45</span><span class="price-new">Q30</span></p>
+    <a class="buy-btn"
+       href="https://wa.me/50230587913?text=Hola,%20estoy%20interesado%20en%20comprar%20una%20cuenta%20de%20Prime%20Video.%20¿Cu%C3%B3mo%20hago%20el%20pago%20por%20Banrural%3F">
+      Comprar por Q30
+    </a>
+  </div>
+</div>
+
+<footer>
+  <p>Pago por Banrural a nombre de ESTEVEN G. PEREZ RODAS – Cuenta: 4091203589</p>
+  <p>Contacto WhatsApp: <a href="https://wa.me/50230587913" style="color:#00ff99">502 3058 7913</a></p>
+</footer>
+
 </body>
 </html>
