@@ -1,101 +1,65 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RODAS - Sistema de Ingresos</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RODAS - Sistema de Ingresos Reales</title>
   <style>
     body {
-      margin: 0;
-      font-family: Arial, sans-serif;
       background-color: #f5f5f5;
+      font-family: Arial;
       color: #333;
+      padding: 0;
+      margin: 0;
     }
     header {
       background-color: #2c3e50;
       color: white;
       padding: 1rem;
       text-align: center;
-      font-size: 1.5rem;
+      font-size: 1.8rem;
     }
     .container {
-      max-width: 1000px;
+      max-width: 800px;
       margin: auto;
       padding: 2rem;
     }
-    .card {
-      background-color: white;
-      padding: 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      margin-bottom: 2rem;
-    }
-    .income {
-      font-size: 2rem;
-      color: green;
-      font-weight: bold;
-    }
     .button {
-      padding: 0.8rem 1.2rem;
+      padding: 1rem;
       background-color: #27ae60;
       color: white;
       border: none;
-      border-radius: 5px;
+      border-radius: 8px;
       cursor: pointer;
-      font-size: 1rem;
+      font-size: 1.2rem;
+      width: 100%;
+      margin-top: 1rem;
     }
-    .button:hover {
-      background-color: #219150;
+    .hidden {
+      display: none;
+    }
+    a {
+      display: block;
+      margin-top: 2rem;
+      text-align: center;
+      font-size: 1.1rem;
+      color: #2980b9;
     }
   </style>
 </head>
 <body>
-  <header>
-    RODAS - Sistema de Ingresos Monetizados
-  </header>
-
+  <header>RODAS - Sistema de Ingresos Monetizados</header>
   <div class="container">
-    <div class="card">
-      <p>Ingreso estimado:</p>
-      <div id="income" class="income">$0.00</div>
-      <button class="button" onclick="simulateIncome()">Simular ingreso</button>
-      <textarea id="log" rows="6" style="width: 100%; margin-top: 1rem;"></textarea>
-    </div>
-
-    <div class="card">
-      <p>Agrega tus enlaces para monetizar:</p>
-      <input type="text" id="input" placeholder="https://tulink.com" style="width: 80%;">
-      <button class="button" onclick="addLink()">Agregar</button>
-      <ul id="list"></ul>
-    </div>
-
-    <div style="text-align: center; margin-top: 2rem;">
-      <a href="https://exe.io/bHpWf5Gu" target="_blank">
-        Acceder al sistema monetizado 💰
-      </a>
-    </div>
+    <p>🧠 Sistema activo para ingresos automáticos.</p>
+    <button class="button" onclick="activarBots()">🔁 Activar sistema GUDIEL</button>
+    <a href="https://exe.io/bHpWf5Gu" target="_blank">🔗 Acceder al enlace monetizado</a>
   </div>
 
   <script>
-    let total = 0;
-    function simulateIncome() {
-      const q = (Math.random() * (2.5 - 0.1) + 0.1).toFixed(2);
-      total += parseFloat(q);
-      document.getElementById('income').innerText = `$${total.toFixed(2)}`;
-      const log = document.getElementById('log');
-      const now = new Date().toLocaleTimeString();
-      log.value += `[${now}] Nuevo ingreso de $${q}\n`;
-    }
-
-    function addLink() {
-      const input = document.getElementById('input');
-      const list = document.getElementById('list');
-      if (input.value.trim() !== '') {
-        const li = document.createElement('li');
-        li.innerHTML = `<a href="${input.value}" target="_blank">${input.value}</a>`;
-        list.appendChild(li);
-        input.value = '';
-      }
+    function activarBots() {
+      fetch("https://your-gudiel-backend-url.com/activar") // será reemplazado por Replit o Termux
+        .then(res => alert("✅ Bots activados correctamente"))
+        .catch(err => alert("❌ Error al activar bots"));
     }
   </script>
 </body>
